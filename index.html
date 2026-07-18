@@ -198,6 +198,71 @@
             color: #e0e0e0;
         }
         
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #00bcd4;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+        
+        .timeline-content {
+            background-color: #1a2a3a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            border: 1px solid #1a2a3a;
+            transition: transform 0.3s, border-color 0.3s;
+            margin: 0 2rem;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: #00bcd4;
+        }
+        
+        .timeline-content h3 {
+            color: #00bcd4;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content p {
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-year {
+            color: #00bcd4;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: #00bcd4;
+            border-radius: 50%;
+            border: 3px solid #0b0f19;
+        }
+        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -315,9 +380,9 @@
             <h1>포트폴리오</h1>
             <ul>
                 <li><a href="#about">소개</a></li>
-                <li><a href="#skills">스킬</a></li>
-                <li><a href="#projects">프로젝트</a></li>
                 <li><a href="#contact">연락처</a></li>
+                <li><a href="#skills">강의 경력</a></li>
+                <li><a href="#projects">프로젝트</a></li>
             </ul>
         </nav>
     </header>
@@ -369,24 +434,40 @@
     
     <section id="skills">
         <div class="section-title-container">
-            <h2 class="section-title">스킬</h2>
+            <h2 class="section-title">강의 경력</h2>
         </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>HTML/CSS</h3>
-                <p>웹 표준 마크업과 스타일링</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2024.03 - 2024.08</div>
+                    <h3>웹 개발 입문 과정</h3>
+                    <p>HTML/CSS 기초부터 반응형 웹사이트 제작까지 실습 중심의 입문 강의 진행</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-                <p>동적 웹 애플리케이션 개발</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2023.09 - 2024.02</div>
+                    <h3>JavaScript 프로그래밍 심화</h3>
+                    <p>ES6+ 문법, 비동기 프로그래밍, DOM 조작 등 실전 웹 애플리케이션 개발 강의</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>React</h3>
-                <p>컴포넌트 기반 UI 개발</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2023.01 - 2023.06</div>
+                    <h3>React 컴포넌트 개발</h3>
+                    <p>Hooks, 상태 관리, 컴포넌트 설계 패턴을 활용한 현대적 UI 개발 과정</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>Python</h3>
-                <p>백엔드 및 데이터 분석</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2022.07 - 2022.12</div>
+                    <h3>Python 데이터 분석 기초</h3>
+                    <p>Pandas, NumPy를 활용한 데이터 처리 및 시각화 입문 강의</p>
+                </div>
             </div>
         </div>
     </section>
