@@ -14,12 +14,12 @@
         body {
             font-family: 'Noto Sans KR', Arial, sans-serif;
             line-height: 1.6;
-            color: #e0e0e0;
-            background-color: #0b0f19;
+            color: #e8e8e8;
+            background-color: #0a1628;
         }
         
         header {
-            background-color: #0b0f19;
+            background-color: #0a1628;
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -27,7 +27,7 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            border-bottom: 1px solid #1a2a3a;
+            border-bottom: 1px solid #1a2d42;
         }
         
         nav {
@@ -52,13 +52,13 @@
         }
         
         nav a {
-            color: #e0e0e0;
+            color: #e8e8e8;
             text-decoration: none;
             transition: color 0.3s;
         }
         
         nav a:hover {
-            color: #00bcd4;
+            color: #00d4aa;
         }
         
         section {
@@ -68,8 +68,8 @@
         }
         
         .hero {
-            background: linear-gradient(135deg, #0b0f19 0%, #1a2a3a 100%);
-            color: #e0e0e0;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2d42 100%);
+            color: #e8e8e8;
             padding: 100px 20px 60px 20px;
             text-align: center;
             margin-top: 60px;
@@ -89,8 +89,8 @@
             text-align: center;
             font-size: 2rem;
             margin-bottom: 3rem;
-            color: #00bcd4;
-            border-bottom: 3px solid #00bcd4;
+            color: #00d4aa;
+            border-bottom: 3px solid #00d4aa;
             display: inline-block;
             padding-bottom: 10px;
         }
@@ -101,21 +101,21 @@
         }
         
         .about-content {
-            background-color: #1a2a3a;
+            background-color: #1a2d42;
             border-radius: 15px;
             padding: 2.5rem;
             display: flex;
             gap: 2rem;
             align-items: flex-start;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            border: 1px solid #00bcd4;
+            border: 1px solid #00d4aa;
         }
         
         .about-image {
             flex-shrink: 0;
             width: 150px;
             height: 150px;
-            background: linear-gradient(135deg, #00bcd4 0%, #008ba3 100%);
+            background: linear-gradient(135deg, #00d4aa 0%, #00a88a 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -123,7 +123,7 @@
             color: white;
             font-size: 1.2rem;
             font-weight: bold;
-            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 212, 170, 0.3);
         }
         
         .about-text {
@@ -132,7 +132,7 @@
         
         .about-text p {
             margin-bottom: 1rem;
-            color: #e0e0e0;
+            color: #e8e8e8;
         }
         
         .strengths-grid {
@@ -143,8 +143,8 @@
         }
         
         .strength-card {
-            background-color: #0b0f19;
-            border: 1px solid #1a2a3a;
+            background-color: #0a1628;
+            border: 1px solid #1a2d42;
             border-radius: 10px;
             padding: 1.5rem;
             text-align: center;
@@ -153,17 +153,17 @@
         
         .strength-card:hover {
             transform: translateY(-5px);
-            border-color: #00bcd4;
+            border-color: #00d4aa;
         }
         
         .strength-card h4 {
-            color: #00bcd4;
+            color: #00d4aa;
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
         }
         
         .strength-card p {
-            color: #b0b0b0;
+            color: #a0aec0;
             font-size: 0.9rem;
             line-height: 1.4;
         }
@@ -175,27 +175,92 @@
         }
         
         .skill-card {
-            background-color: #1a2a3a;
+            background-color: #1a2d42;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             text-align: center;
             transition: transform 0.3s, border-color 0.3s;
-            border: 1px solid #1a2a3a;
+            border: 1px solid #1a2d42;
         }
         
         .skill-card:hover {
             transform: translateY(-5px);
-            border-color: #00bcd4;
+            border-color: #00d4aa;
         }
         
         .skill-card h3 {
-            color: #00bcd4;
+            color: #00d4aa;
             margin-bottom: 1rem;
         }
         
         .skill-card p {
-            color: #e0e0e0;
+            color: #e8e8e8;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #00d4aa;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+        
+        .timeline-content {
+            background-color: #1a2d42;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            border: 1px solid #1a2d42;
+            transition: transform 0.3s, border-color 0.3s;
+            margin: 0 2rem;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: #00d4aa;
+        }
+        
+        .timeline-content h3 {
+            color: #00d4aa;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content p {
+            color: #e8e8e8;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-year {
+            color: #00d4aa;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background-color: #00d4aa;
+            border-radius: 50%;
+            border: 3px solid #0a1628;
         }
         
         .projects-grid {
@@ -205,28 +270,28 @@
         }
         
         .project-card {
-            background-color: #1a2a3a;
+            background-color: #1a2d42;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             transition: transform 0.3s, border-color 0.3s;
-            border: 1px solid #1a2a3a;
+            border: 1px solid #1a2d42;
         }
         
         .project-card:hover {
             transform: translateY(-5px);
-            border-color: #00bcd4;
+            border-color: #00d4aa;
         }
         
         .project-image {
-            background: linear-gradient(135deg, #1a2a3a 0%, #0b0f19 100%);
+            background: linear-gradient(135deg, #1a2d42 0%, #0a1628 100%);
             height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #00bcd4;
+            color: #00d4aa;
             font-size: 1.2rem;
-            border-bottom: 1px solid #00bcd4;
+            border-bottom: 1px solid #00d4aa;
         }
         
         .project-content {
@@ -234,20 +299,20 @@
         }
         
         .project-content h3 {
-            color: #00bcd4;
+            color: #00d4aa;
             margin-bottom: 0.5rem;
         }
         
         .project-content p {
-            color: #e0e0e0;
+            color: #e8e8e8;
             margin-bottom: 1rem;
         }
         
         .project-link {
             display: inline-block;
             padding: 8px 16px;
-            background-color: #00bcd4;
-            color: #0b0f19;
+            background-color: #00d4aa;
+            color: #0a1628;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
@@ -255,7 +320,7 @@
         }
         
         .project-link:hover {
-            background-color: #008ba3;
+            background-color: #00a88a;
         }
         
         .contact-content {
@@ -267,14 +332,14 @@
         .contact-content p {
             margin-bottom: 2rem;
             font-size: 1.1rem;
-            color: #e0e0e0;
+            color: #e8e8e8;
         }
         
         .contact-button {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #00bcd4;
-            color: #0b0f19;
+            background-color: #00d4aa;
+            color: #0a1628;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.1rem;
@@ -283,7 +348,7 @@
         }
         
         .contact-button:hover {
-            background-color: #008ba3;
+            background-color: #00a88a;
         }
         
         footer {
@@ -315,9 +380,9 @@
             <h1>포트폴리오</h1>
             <ul>
                 <li><a href="#about">소개</a></li>
-                <li><a href="#skills">스킬</a></li>
-                <li><a href="#projects">프로젝트</a></li>
                 <li><a href="#contact">연락처</a></li>
+                <li><a href="#skills">강의 경력</a></li>
+                <li><a href="#projects">프로젝트</a></li>
             </ul>
         </nav>
     </header>
@@ -369,24 +434,40 @@
     
     <section id="skills">
         <div class="section-title-container">
-            <h2 class="section-title">스킬</h2>
+            <h2 class="section-title">강의 경력</h2>
         </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>HTML/CSS</h3>
-                <p>웹 표준 마크업과 스타일링</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2024.03 - 2024.08</div>
+                    <h3>웹 개발 입문 과정</h3>
+                    <p>HTML/CSS 기초부터 반응형 웹사이트 제작까지 실습 중심의 입문 강의 진행</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-                <p>동적 웹 애플리케이션 개발</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2023.09 - 2024.02</div>
+                    <h3>JavaScript 프로그래밍 심화</h3>
+                    <p>ES6+ 문법, 비동기 프로그래밍, DOM 조작 등 실전 웹 애플리케이션 개발 강의</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>React</h3>
-                <p>컴포넌트 기반 UI 개발</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2023.01 - 2023.06</div>
+                    <h3>React 컴포넌트 개발</h3>
+                    <p>Hooks, 상태 관리, 컴포넌트 설계 패턴을 활용한 현대적 UI 개발 과정</p>
+                </div>
             </div>
-            <div class="skill-card">
-                <h3>Python</h3>
-                <p>백엔드 및 데이터 분석</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-year">2022.07 - 2022.12</div>
+                    <h3>Python 데이터 분석 기초</h3>
+                    <p>Pandas, NumPy를 활용한 데이터 처리 및 시각화 입문 강의</p>
+                </div>
             </div>
         </div>
     </section>
