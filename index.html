@@ -263,64 +263,83 @@
             border: 3px solid #0a1628;
         }
         
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .experience-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
         }
         
-        .project-card {
+        .experience-item {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
             background-color: #1a2d42;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            transition: transform 0.3s, border-color 0.3s;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             border: 1px solid #1a2d42;
+            transition: transform 0.3s, border-color 0.3s;
         }
         
-        .project-card:hover {
+        .experience-item:hover {
             transform: translateY(-5px);
             border-color: #00d4aa;
         }
         
-        .project-image {
-            background: linear-gradient(135deg, #1a2d42 0%, #0a1628 100%);
+        .experience-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .experience-image {
+            flex-shrink: 0;
+            width: 300px;
             height: 200px;
+            background: linear-gradient(135deg, #00d4aa 0%, #00a88a 100%);
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #00d4aa;
-            font-size: 1.2rem;
-            border-bottom: 1px solid #00d4aa;
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        .project-content h3 {
-            color: #00d4aa;
-            margin-bottom: 0.5rem;
-        }
-        
-        .project-content p {
-            color: #e8e8e8;
-            margin-bottom: 1rem;
-        }
-        
-        .project-link {
-            display: inline-block;
-            padding: 8px 16px;
-            background-color: #00d4aa;
             color: #0a1628;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            font-size: 1.2rem;
             font-weight: bold;
         }
         
-        .project-link:hover {
-            background-color: #00a88a;
+        .experience-content {
+            flex: 1;
+        }
+        
+        .experience-content h3 {
+            color: #00d4aa;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .experience-content .period {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .experience-content p {
+            color: #e8e8e8;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .experience-content .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .experience-content .tech-stack span {
+            background-color: #0a1628;
+            color: #00d4aa;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            border: 1px solid #00d4aa;
         }
         
         .contact-content {
@@ -371,6 +390,25 @@
             .hero h2 {
                 font-size: 2rem;
             }
+            
+            .experience-item {
+                flex-direction: column !important;
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+            
+            .experience-image {
+                width: 100%;
+                height: 150px;
+            }
+            
+            .experience-content h3 {
+                font-size: 1.2rem;
+            }
+            
+            .strengths-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -382,7 +420,7 @@
                 <li><a href="#about">소개</a></li>
                 <li><a href="#contact">연락처</a></li>
                 <li><a href="#skills">강의 경력</a></li>
-                <li><a href="#projects">프로젝트</a></li>
+                <li><a href="#experience">개발 경력</a></li>
             </ul>
         </nav>
     </header>
@@ -472,39 +510,43 @@
         </div>
     </section>
     
-    <section id="projects">
+    <section id="experience">
         <div class="section-title-container">
-            <h2 class="section-title">프로젝트</h2>
+            <h2 class="section-title">개발 경력</h2>
         </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    프로젝트 1
+        <div class="experience-list">
+            <div class="experience-item">
+                <div class="experience-image">
+                    스타트업 A
                 </div>
-                <div class="project-content">
-                    <h3>웹 애플리케이션</h3>
-                    <p>React와 Node.js를 사용한 풀스택 웹 애플리케이션</p>
-                    <a href="#" class="project-link">자세히 보기</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    프로젝트 2
-                </div>
-                <div class="project-content">
-                    <h3>모바일 앱</h3>
-                    <p>React Native를 사용한 크로스플랫폼 모바일 애플리케이션</p>
-                    <a href="#" class="project-link">자세히 보기</a>
+                <div class="experience-content">
+                    <h3>풀스택 개발자</h3>
+                    <div class="period">2023.01 - 현재</div>
+                    <p>스타트업 A에서 프론트엔드 및 백엔드 개발을 담당했습니다. React와 Node.js를 활용하여 웹 플랫폼의 핵심 기능을 개발하고, 사용자 경험 개선을 위한 UI/UX 최적화 작업을 진행했습니다.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    프로젝트 3
+            <div class="experience-item">
+                <div class="experience-image">
+                    IT 기업 B
                 </div>
-                <div class="project-content">
-                    <h3>데이터 분석</h3>
-                    <p>Python과 Pandas를 사용한 데이터 분석 프로젝트</p>
-                    <a href="#" class="project-link">자세히 보기</a>
+                <div class="experience-content">
+                    <h3>프론트엔드 개발자</h3>
+                    <div class="period">2021.06 - 2022.12</div>
+                    <p>IT 기업 B에서 대규모 웹 서비스의 프론트엔드 개발을 담당했습니다. Vue.js를 활용한 컴포넌트 기반 아키텍처를 구축하고, 성능 최적화 및 접근성 개선을 통해 사용자 만족도를 높였습니다.</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Sass</span>
+                        <span class="tech-tag">Webpack</span>
+                        <span class="tech-tag">Jest</span>
+                    </div>
                 </div>
             </div>
         </div>
